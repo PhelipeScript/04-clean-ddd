@@ -16,7 +16,7 @@ describe('Get Question By Slug', () => {
     const newQuestion = makeQuestion({
       slug: Slug.create('example-question'),
     })
-    inMemoryQuestionsRepository.create(newQuestion)
+    await inMemoryQuestionsRepository.create(newQuestion)
 
     const { question } = await sut.execute({
       slug: 'example-question',

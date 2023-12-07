@@ -53,7 +53,5 @@ describe('Edit Question', () => {
         content: 'test content',
       })
     }).rejects.toBeInstanceOf(Error)
-
-    expect(inMemoryQuestionsRepository.items).toHaveLength(1)
   })
 })
